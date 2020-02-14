@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+
+    <div id="app">
+        <input type="text" name="nome" id="nome" class="nome">
+        <button class="butao">Adicionar</button>
+    </div>
+
+    <div class="box"></div>
+
+    <script>
+        /* function exibeAlgo() {
+            console.log('Hello World');
+        }
+
+        // chamando a funçao sem os parenteses ela nao executa, ela é passada como paramentro, isso é referenciar a função 
+        setInterval(exibeAlgo(), 1000); 
+
+        // se chamar a função passando os parenteses ela é executada, entao so vai printar o hello uma vez
+        // setInterval(exibeAlgo(), 1000);  */
+
+        // pegando os elementos da DOM
+        var inputElement = document.getElementById('nome'); // pegando o input pelo id
+        var inputElement = document.getElementsByTagName('input')[0]; // pegando o input pela a tag
+        var inputElement = document.getElementsByClassName('nome')[0]; // pegando o input pela a classe
+        
+        var melhorManeira = document.querySelector('div#app input'); // pegando o input atravez do queryselector que permite percorrer a DOM
+        var melhorManeira2 = document.querySelector('input[name=nome]'); // colocando os [] esta referenciando uma propriedade daquele elemento
+        
+        var btnElement = document.querySelector('button.butao');
+
+        btnElement.onclick = function() {
+            var text = melhorManeira2.value;
+            alert(text);
+        }
+
+        console.log(melhorManeira2);
+
+
+        // criando elementos na DOM
+
+        var link = document.createElement('a'); // criando elemento de link <a>
+        link.setAttribute('href', 'http://rocketseat.com.br');
+
+        var textElemnt = document.createTextNode('Acessar site da Rocketseat');
+        link.appendChild(textElemnt);
+
+        var container = document.querySelector('#app');
+        container.appendChild(link); // colocando o atributo que foi criado na pagina
+
+        container.removeChild(melhorManeira2); //removendo um elemento
+        
+        var boxElement = document.querySelector('.box');
+
+        boxElement.style.width = 100;
+        boxElement.style.height = 100;
+        boxElement.style.backgroundColor = '#f00';
+    </script>
+</body>
+</html>

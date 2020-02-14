@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button id="botao">Adicionar</button>
+    </div>
+
+
+    <script>
+        var botao = document.querySelector('#botao');
+
+        botao.onclick = function() {
+            
+            var box = document.createElement('div');
+            box.setAttribute("class");
+
+            box.style.width = 100;
+            box.style.height = 100;
+            box.style.backgroundColor = "red";
+
+            var container = document.querySelector('#app');
+            container.appendChild(box);
+        }
+    </script>
+</body>
+</html>
