@@ -3,7 +3,7 @@
 📓  Código com minhas anotações pessoais. 💻
 
 Linguagens:
-> JavaScript
+> JavaScript  
 > NodeJS.  
 > ReactJS.  
 > React Native.  
